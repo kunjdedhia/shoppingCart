@@ -19,11 +19,8 @@ class OrderItemsController < ApplicationController
     @order_item.destroy
     @order_items = @order.order_items
   end
-
 private
-
-def order_item_param
+  def order_item_param
     params.require(:order_item).permit(:quantity, :product_id)
   end
-
 end
